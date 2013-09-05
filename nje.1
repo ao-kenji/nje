@@ -1,0 +1,65 @@
+.\" $Id: nje.1,v 1.2 2007/05/24 13:06:03 aoyama Exp $
+.\" Copyright (c) 2007 Kenji AOYAMA <aoyama [at] nk-home [dot] net>
+.\" All rights reserved.
+.\" 
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.Dd May 2, 2007
+.Dt NJE 1
+.Os
+.Sh NAME
+.Nm nje
+.Nd send the message data to NJE-10[56] message board
+.Sh SYNOPSIS
+.Nm
+.Op Fl f Ar device
+.Op Fl v
+.Op Ar arguments  ...
+.Sh DESCRIPTION
+.Nm
+sends the message data to NJE-10[56] message board.
+The contens of message is specified in arguments.
+.Pp
+The options are as follows:
+.Bl -tag -width Fl
+.It Fl f Ar device
+Specify the device where NJE-10[56] is attached.  Default is /dev/tty00 .
+.It Fl v
+Verbose mode.
+Print the sending message.
+.It Ar arguments  ...
+Message data.
+.El
+.Sh FILES
+.Bl -tag -width Pa
+.It Pa /dev/tty00
+Default tty device where NJE-10[56] is attached
+.El
+.Sh SEE ALSO
+.Bl -item
+.It
+Product information:
+http://www.njrc.jp/product/NJE-105.html
+.It
+Message format etc.:
+http://www.hydra.cx/msgbd.html
+.El
