@@ -1,0 +1,10 @@
+* getnews.pl:
+
+	A sample perl script.  It gets news contents from
+	Asahi-Shimbun twitter and makes Shift-JIS 'news' file.  It
+	also uses the twitter client 'tw', written by ruby, internally.
+
+* mb.sh:
+
+	A sample Bourne shell script.  It sends contents of 'news'
+	file to NJE-10[56].
